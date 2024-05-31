@@ -40,9 +40,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Create contact address failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
@@ -58,7 +58,7 @@ Responese Body (Success) :
 ```json
 {
     "statusCode" : 200,
-    "message" : "Get contact address detail success", 
+    "message" : "Get specific address contact user success", 
     "data" : {
         "id" : 1,
         "street" : "street_value", 
@@ -74,9 +74,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Get contact address detail failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
@@ -120,9 +120,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Update contact address failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
@@ -138,7 +138,7 @@ Responese Body (Success) :
 ```json
 {
     "statusCode" : 200,
-    "message" : "Delete contact address success", 
+    "message" : "Remove address success", 
     "data" : true
 }
 ```
@@ -147,9 +147,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Delete contact address failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
@@ -191,9 +191,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Get contact addresses failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 

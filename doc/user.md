@@ -18,7 +18,7 @@ Responese Body (Success) :
 
 ```json
 {
-    "statusCode" : 201,
+    "statusCode" : 200,
     "message" : "Register success", 
     "data" : {
         "username" : "username_value",
@@ -31,9 +31,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 400,
-    "message" : "Register failed", 
-    "errors" : "Username already registered"
+    "statusCode": 400,
+    "message": "Validation Error",
+    "errors": "Username already exist"
 }
 ```
 
@@ -68,9 +68,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 400,
-    "message" : "Login failed", 
-    "errors" : "Wrong username or password"
+    "statusCode": 401,
+    "message": "Username or password is invalid",
+    "errors": "Username or password is invalid"
 }
 ```
 
@@ -98,9 +98,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Get current user failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
@@ -137,9 +137,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Update current user failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
@@ -154,9 +154,9 @@ Responese Body (Success) :
 
 ```json
 {
-    "statusCode" : 200,
-    "message" : "Logout success", 
-    "data" : true
+    "statusCode": 200,
+    "message": "Logout success",
+    "data": true
 }
 ```
 
@@ -164,9 +164,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Logout failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 

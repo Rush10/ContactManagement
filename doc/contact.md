@@ -23,7 +23,7 @@ Responese Body (Success) :
 ```json
 {
     "statusCode" : 201,
-    "message" : "Create contact success", 
+    "message" : "Create Contact Success", 
     "data" : {
         "id" : 1, 
         "first_name" : "first_name_value", 
@@ -38,9 +38,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Create contact failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
@@ -56,7 +56,7 @@ Responese Body (Success) :
 ```json
 {
     "statusCode" : 200,
-    "message" : "Get contact detail success", 
+    "message" : "Get specific contact user success", 
     "data" : {
         "id" : 1, 
         "first_name" : "first_name_value", 
@@ -71,9 +71,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Get contact detail failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
@@ -115,9 +115,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Update contact failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
@@ -141,9 +141,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Remove contact failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
@@ -165,7 +165,7 @@ Responese Body (Success) :
 ```json
 {
     "statusCode" : 200,
-    "message" : "Search contact success", 
+    "message" : "Success search contact", 
     "data" : [
         {
             "id" : 1, 
@@ -194,9 +194,9 @@ Responese Body (Failed) :
 
 ```json
 {
-    "statusCode" : 401,
-    "message" : "Search contact failed", 
-    "errors" : "Unauthorized"
+    "statusCode": 401,
+    "message": "Unauthorized",
+    "error": "Unauthorized"
 }
 ```
 
