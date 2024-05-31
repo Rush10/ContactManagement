@@ -1,0 +1,55 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  // provider = "postgresql"
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User{
+  username String @id @db.VarChar(100) //this is username column, data type: string, primary key because using @id, length: 100 char
+  password String @db.VarChar(100) //this is password column, data type: string, length: 100 char
+  name String @db.VarChar(100) //this is name column, data type: string, length: 100 char
+  token String? @db.VarChar(100) //this is token column, data type: string, can be null: true, length: 100 char
+
+  contacts Contact[] //this is script to allow Contact model to use this model for refering purpose
+
+  @@map("users") //this is table name
+}
+
+model Contact{
+  id Int @id @default(autoincrement()) //this is id column, data type:integer, primary key because using @id, default: auto increment
+  first_name String @db.VarChar(100) //this is first_name column, data type: string, length: 100 char
+  last_name String? @db.VarChar(100) //this is last_name column, data type: string, can be null: true, length: 100 char
+  email String? @db.VarChar(100) //this is email column, data type: string, can be null: true, length: 100 char
+  phone String? @db.VarChar(20) //this is phone column, data type: string, can be null: true, length: 100 char
+  username String @db.VarChar(100) //this is username column, data type: string, length: 100 char
+
+  user User @relation(fields: [username], references: [username]) //this is script to refer username column in Contact model to username column in User model;
+
+  addresses Address[] //this is script to allow Address model to use this model for refering purpose
+  
+  @@map("contacts") //this is table name
+}
+
+model Address{
+  id Int @id @default(autoincrement()) //this is id column, data type:integer, primary key because using @id, default: auto increment
+  street String? @db.VarChar(255) //this is street column, data type: string, can be null: true, length: 255 char
+  city String? @db.VarChar(100) //this is city column, data type: string, can be null: true, length: 100 char
+  province String? @db.VarChar(100) //this is province column, data type: string, can be null: true, length: 100 char
+  country String @db.VarChar(100) //this is country column, data type: string, length: 100 char
+  postal_code String @db.VarChar(10) //this is postal_code column, data type: string, length: 10 char
+  contact_id Int //this is contact_id column, data type: integer
+
+  contact Contact @relation(fields: [contact_id], references: [id]) //this is script to refer contact_id column in Address model to id column in Contact model;
+
+  @@map("addresses") //this is table name
+}
